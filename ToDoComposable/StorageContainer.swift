@@ -46,7 +46,6 @@ class StorageContainer: ObservableObject {
     func update(task: Tasks) {
         task.completed.toggle()
         save()
-        container.newBackgroundContext()
     }
     
     func save() {

@@ -13,13 +13,13 @@
 		B33B3ED52A2F368D0077BFC4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3ED42A2F368D0077BFC4 /* MainView.swift */; };
 		B33B3ED82A30C8030077BFC4 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B33B3ED72A30C8030077BFC4 /* ComposableArchitecture */; };
 		B33B3EDA2A30C8280077BFC4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */; };
-		B33B3EDD2A36FEBF0077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EDB2A36FEBF0077BFC4 /* ToDo.xcdatamodeld */; };
 		B33B3EE12A37574C0077BFC4 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */; };
 		B33B3EE32A3759F70077BFC4 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE22A3759F70077BFC4 /* TaskCell.swift */; };
 		B33B3EEB2A39BCFC0077BFC4 /* ToDoComposableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EEA2A39BCFC0077BFC4 /* ToDoComposableTests.swift */; };
 		B33B3EF12A39BDDD0077BFC4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */; };
-		B33B3EF22A39BE9E0077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EDB2A36FEBF0077BFC4 /* ToDo.xcdatamodeld */; };
 		B33B3EF32A39BEB10077BFC4 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */; };
+		B33B3F342A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */; };
+		B33B3F352A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,11 +39,11 @@
 		B33B3ECD2A2F35F50077BFC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B33B3ED42A2F368D0077BFC4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		B33B3EDC2A36FEBF0077BFC4 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 		B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageContainer.swift; sourceTree = "<group>"; };
 		B33B3EE22A3759F70077BFC4 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		B33B3EE82A39BCFC0077BFC4 /* ToDoComposableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoComposableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33B3EEA2A39BCFC0077BFC4 /* ToDoComposableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoComposableTests.swift; sourceTree = "<group>"; };
+		B33B3F332A4055690077BFC4 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +91,9 @@
 				B33B3ECC2A2F35F50077BFC4 /* Preview Content */,
 				B33B3ED42A2F368D0077BFC4 /* MainView.swift */,
 				B33B3EE22A3759F70077BFC4 /* TaskCell.swift */,
+				B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */,
 				B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */,
 				B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */,
-				B33B3EDB2A36FEBF0077BFC4 /* ToDo.xcdatamodeld */,
 			);
 			path = ToDoComposable;
 			sourceTree = "<group>";
@@ -221,10 +221,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33B3ED52A2F368D0077BFC4 /* MainView.swift in Sources */,
+				B33B3F342A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */,
 				B33B3EE32A3759F70077BFC4 /* TaskCell.swift in Sources */,
 				B33B3EC72A2F35F40077BFC4 /* ToDoComposableApp.swift in Sources */,
 				B33B3EDA2A30C8280077BFC4 /* MainViewModel.swift in Sources */,
-				B33B3EDD2A36FEBF0077BFC4 /* ToDo.xcdatamodeld in Sources */,
 				B33B3EE12A37574C0077BFC4 /* StorageContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,8 +235,8 @@
 			files = (
 				B33B3EEB2A39BCFC0077BFC4 /* ToDoComposableTests.swift in Sources */,
 				B33B3EF32A39BEB10077BFC4 /* StorageContainer.swift in Sources */,
-				B33B3EF22A39BE9E0077BFC4 /* ToDo.xcdatamodeld in Sources */,
 				B33B3EF12A39BDDD0077BFC4 /* MainViewModel.swift in Sources */,
+				B33B3F352A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,12 +511,12 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		B33B3EDB2A36FEBF0077BFC4 /* ToDo.xcdatamodeld */ = {
+		B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B33B3EDC2A36FEBF0077BFC4 /* ToDo.xcdatamodel */,
+				B33B3F332A4055690077BFC4 /* ToDo.xcdatamodel */,
 			);
-			currentVersion = B33B3EDC2A36FEBF0077BFC4 /* ToDo.xcdatamodel */;
+			currentVersion = B33B3F332A4055690077BFC4 /* ToDo.xcdatamodel */;
 			path = ToDo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

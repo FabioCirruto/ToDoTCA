@@ -50,17 +50,14 @@ struct MainView: View {
                         }
                         
                         List {
-                            
-                            
-                            
-                            /*ForEach(vm.tasks, id: \.self) { task in
+                            ForEach(vm.tasks, id: \.self) { task in
                                 TaskCell(task: task)
                                     .onTapGesture {
                                         vm.send(.toggleCompleted(task), animation: .easeInOut)
                                     }
                                     .listRowBackground(Color.clear)
                                     .listRowSeparator(.hidden)
-                            }*/
+                            }
                         }
                         .scrollContentBackground(.hidden)
                         .listStyle(.plain)
