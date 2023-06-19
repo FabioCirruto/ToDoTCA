@@ -9,9 +9,18 @@ import SwiftUI
 import ComposableArchitecture
 
 struct MainView: View {
-    
     @State private var name: String = ""
     let vm: StoreOf<MainViewModel>
+    
+    var list: some View {
+        ForEachStore(
+          self.vm.scope(state: \.tasks, action: MainViewModel.Action.task(state:action:))
+        ) {
+          TaskCell(store: $0)
+                .listRowBackground(Color.clear)
+                .listRowSeparator(.hidden)
+        }
+    }
     
     var body: some View {
         WithViewStore(self.vm, observe: { $0 }) { vm in
@@ -31,7 +40,6 @@ struct MainView: View {
                                     )
                                 
                                 Button {
-                                    //MARK: TODO
                                     vm.send(.addElement(name))
                                     name = ""
                                 } label: {
@@ -50,14 +58,7 @@ struct MainView: View {
                         }
                         
                         List {
-                            ForEach(vm.tasks, id: \.self) { task in
-                                TaskCell(task: task)
-                                    .onTapGesture {
-                                        vm.send(.toggleCompleted(task), animation: .easeInOut)
-                                    }
-                                    .listRowBackground(Color.clear)
-                                    .listRowSeparator(.hidden)
-                            }
+                            list
                         }
                         .scrollContentBackground(.hidden)
                         .listStyle(.plain)
@@ -86,7 +87,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView(vm: Store(initialState: MainViewModel.State()) {
-            MainViewModel(loadElements: { return [] })
+            MainViewModel(taskCore: MockProvider())
         })
     }
 }

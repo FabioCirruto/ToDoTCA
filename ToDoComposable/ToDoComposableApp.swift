@@ -14,9 +14,7 @@ struct ToDoComposableApp: App {
     var body: some Scene {
         WindowGroup {
             MainView(vm: Store(initialState: MainViewModel.State()) {
-                MainViewModel(loadElements: {
-                    return StorageContainer.shared.loadElements()
-                })
+                MainViewModel(taskCore: TasksCore())
             })
         }
     }

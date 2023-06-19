@@ -6,13 +6,15 @@
 //
 import ComposableArchitecture
 import XCTest
+@testable import ToDoComposable
 
 final class ToDoComposableTests: XCTestCase {
-
+    
     func testShowHideForm() {
-        let store = TestStore(initialState: MainViewModel.State()) {
-            MainViewModel(loadElements: { return [] })
-        }
+        let store = TestStore(
+          initialState: MainViewModel.State(),
+          reducer: MainViewModel(taskCore: MockProvider())
+        )
         
         store.send(.showHideForm) {
             $0.showForm = true
@@ -20,17 +22,27 @@ final class ToDoComposableTests: XCTestCase {
     }
     
     func testLoadElement() {
-        let store = TestStore(initialState: MainViewModel.State()) {
-            MainViewModel(loadElements: { return [] })
-        }
+        let provider = MockProvider()
+       let store = TestStore(
+          initialState: MainViewModel.State(),
+          reducer: MainViewModel(taskCore: provider)
+        )
         
-        store.send(.loadElement)
+        store.send(.loadElement) {
+            var tasks: IdentifiedArrayOf<TaskVM.State> = []
+            for task in provider.tasks {
+                tasks.append(TaskVM.State(id: task.id, task: task))
+            }
+            $0.tasks = tasks
+        }
     }
     
     func testAddElement() {
-        let store = TestStore(initialState: MainViewModel.State()) {
-            MainViewModel(loadElements: { return [] })
-        }
+        let provider = MockProvider()
+        let store = TestStore(
+          initialState: MainViewModel.State(),
+          reducer: MainViewModel(taskCore: provider)
+        )
         
         store.send(.showHideForm) {
             $0.showForm = true
@@ -42,6 +54,23 @@ final class ToDoComposableTests: XCTestCase {
             $0.showForm = false
         }
         
-        store.receive(.loadElement)
+        store.receive(.loadElement) {
+            var tasks: IdentifiedArrayOf<TaskVM.State> = []
+            for task in provider.tasks {
+                tasks.append(TaskVM.State(id: task.id, task: task))
+            }
+            $0.tasks = tasks
+        }
+    }
+    
+    func testToggleCompleted() {
+        let task = MockProvider.getTask()
+        let store = TestStore(initialState: TaskVM.State(id: task.id, task: task)) {
+            TaskVM()
+        }
+        
+        store.send(.toggleCompleted) {
+            $0.task.completed = true
+        }
     }
 }

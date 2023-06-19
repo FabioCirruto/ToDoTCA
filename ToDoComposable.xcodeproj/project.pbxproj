@@ -16,10 +16,13 @@
 		B33B3EE12A37574C0077BFC4 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */; };
 		B33B3EE32A3759F70077BFC4 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE22A3759F70077BFC4 /* TaskCell.swift */; };
 		B33B3EEB2A39BCFC0077BFC4 /* ToDoComposableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EEA2A39BCFC0077BFC4 /* ToDoComposableTests.swift */; };
-		B33B3EF12A39BDDD0077BFC4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */; };
 		B33B3EF32A39BEB10077BFC4 /* StorageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */; };
 		B33B3F342A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */; };
 		B33B3F352A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */; };
+		B33B3F372A4086E00077BFC4 /* ViewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F362A4086E00077BFC4 /* ViewTask.swift */; };
+		B33B3F3F2A408B310077BFC4 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F3E2A408B310077BFC4 /* TaskViewModel.swift */; };
+		B33B3F412A408EEA0077BFC4 /* MockProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F402A408EEA0077BFC4 /* MockProvider.swift */; };
+		B33B3F442A40AA470077BFC4 /* TasksCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33B3F432A40AA470077BFC4 /* TasksCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		B33B3EE82A39BCFC0077BFC4 /* ToDoComposableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoComposableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33B3EEA2A39BCFC0077BFC4 /* ToDoComposableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoComposableTests.swift; sourceTree = "<group>"; };
 		B33B3F332A4055690077BFC4 /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
+		B33B3F362A4086E00077BFC4 /* ViewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTask.swift; sourceTree = "<group>"; };
+		B33B3F3E2A408B310077BFC4 /* TaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
+		B33B3F402A408EEA0077BFC4 /* MockProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProvider.swift; sourceTree = "<group>"; };
+		B33B3F432A40AA470077BFC4 /* TasksCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +93,12 @@
 		B33B3EC52A2F35F40077BFC4 /* ToDoComposable */ = {
 			isa = PBXGroup;
 			children = (
+				B33B3F382A408AB30077BFC4 /* Core */,
 				B33B3EC62A2F35F40077BFC4 /* ToDoComposableApp.swift */,
 				B33B3ECA2A2F35F50077BFC4 /* Assets.xcassets */,
 				B33B3ECC2A2F35F50077BFC4 /* Preview Content */,
-				B33B3ED42A2F368D0077BFC4 /* MainView.swift */,
-				B33B3EE22A3759F70077BFC4 /* TaskCell.swift */,
-				B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */,
-				B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */,
-				B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */,
+				B33B3F3A2A408ACB0077BFC4 /* MainView */,
+				B33B3F3C2A408AE50077BFC4 /* Model */,
 			);
 			path = ToDoComposable;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				B33B3ECD2A2F35F50077BFC4 /* Preview Assets.xcassets */,
+				B33B3F402A408EEA0077BFC4 /* MockProvider.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -112,6 +118,43 @@
 				B33B3EEA2A39BCFC0077BFC4 /* ToDoComposableTests.swift */,
 			);
 			path = ToDoComposableTests;
+			sourceTree = "<group>";
+		};
+		B33B3F382A408AB30077BFC4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B33B3F322A4055690077BFC4 /* ToDo.xcdatamodeld */,
+				B33B3EE02A37574C0077BFC4 /* StorageContainer.swift */,
+				B33B3F432A40AA470077BFC4 /* TasksCore.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B33B3F3A2A408ACB0077BFC4 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				B33B3ED42A2F368D0077BFC4 /* MainView.swift */,
+				B33B3ED92A30C8280077BFC4 /* MainViewModel.swift */,
+				B33B3F3B2A408AD60077BFC4 /* Cell */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		B33B3F3B2A408AD60077BFC4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B33B3EE22A3759F70077BFC4 /* TaskCell.swift */,
+				B33B3F3E2A408B310077BFC4 /* TaskViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B33B3F3C2A408AE50077BFC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B33B3F362A4086E00077BFC4 /* ViewTask.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,8 +265,12 @@
 			files = (
 				B33B3ED52A2F368D0077BFC4 /* MainView.swift in Sources */,
 				B33B3F342A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */,
+				B33B3F412A408EEA0077BFC4 /* MockProvider.swift in Sources */,
 				B33B3EE32A3759F70077BFC4 /* TaskCell.swift in Sources */,
+				B33B3F372A4086E00077BFC4 /* ViewTask.swift in Sources */,
+				B33B3F442A40AA470077BFC4 /* TasksCore.swift in Sources */,
 				B33B3EC72A2F35F40077BFC4 /* ToDoComposableApp.swift in Sources */,
+				B33B3F3F2A408B310077BFC4 /* TaskViewModel.swift in Sources */,
 				B33B3EDA2A30C8280077BFC4 /* MainViewModel.swift in Sources */,
 				B33B3EE12A37574C0077BFC4 /* StorageContainer.swift in Sources */,
 			);
@@ -235,7 +282,6 @@
 			files = (
 				B33B3EEB2A39BCFC0077BFC4 /* ToDoComposableTests.swift in Sources */,
 				B33B3EF32A39BEB10077BFC4 /* StorageContainer.swift in Sources */,
-				B33B3EF12A39BDDD0077BFC4 /* MainViewModel.swift in Sources */,
 				B33B3F352A4055690077BFC4 /* ToDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
